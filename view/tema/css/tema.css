@@ -1,0 +1,210 @@
+﻿#minhacontaflutua{
+    margin: 0; 
+    font-size: 23px /*smaller*/;
+    font-weight: bold;
+    line-height: 1.1;
+    position: fixed;
+    top: 0.5em;
+    left: auto;
+    width: 0.5em;
+    right: 1em;
+    color: #000;
+    cursor: pointer;
+
+}
+#minhacontaflutua img{
+    border-radius: 50%;
+
+}
+#bloco_login_adm{
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 30px;
+}
+#section_login_adm{
+    margin: 0 auto;
+
+}
+
+
+#topo{
+
+min-height: 100px;
+background-color: #FEFEFE;
+color: #fff;
+
+}
+
+#logotipo h1{
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 800;
+    padding-left: 20px;
+    
+}
+#logotipo h1 a{
+    color: #257143;
+}
+
+.tamanho-roupas{
+    margin: 15px;
+    
+}
+.linkvisualizado:visited{
+    color: #f00;
+}
+
+
+
+@media only screen and (max-width: 990px) {
+    #logotipo {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+    }
+    .hiddenonmobile{
+        display: none;
+    }
+
+}
+.espacamento{
+    margin-left: 25px;
+}
+
+.row {
+    margin-right: 0px !important;
+}
+.container-fluid {
+    padding-right: 0px;
+}
+
+
+#conteudo{
+
+   min-height: 450px;
+}
+
+#lateral{
+
+   border-right: 1px solid #adadad;
+   height: 100%;
+  }
+
+  .transparente{
+   opacity: 0.9;
+
+  }
+
+
+/* CLASSES OVERRIDE DO BOOTSTRAP para personalização*/
+
+/* navbar e menu navbar */
+.navbar-inverse{
+    border-radius: 0;
+
+}
+.thumbnail{
+    box-shadow: 1.5px 1.5px 2.5px #adadad;
+}
+
+
+.navbar-inverse .navbar-nav > li > a{
+
+  color: #fff;
+  font-size: 16px;
+
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+
+ background-color: #000;
+ border-radius: 10px;
+ color: #eb9316;
+
+}
+
+/* menu lateral com list group*/
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+
+   background-color: #101010;
+
+}
+
+a.list-group-item:hover{
+
+    background-color: #262626;;
+     color: #FFF;
+
+
+}
+
+a.list-group-item{
+
+    border: 0;
+    font-size: 16px;
+
+
+}
+
+section#fazerlogin{
+    padding-top: 20px;
+    min-height: 400px;
+}
+
+section.minhaconta{
+    padding-top: 20px;
+    min-height: 300px;
+}
+
+#menuadm div a, #minhaconta div a{
+    margin-bottom: 5px;
+}
+.thumbnail{
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/*footer*/
+
+#rodape{
+
+ min-height: 150px;
+ background-color: #257143;
+color: #fff;
+
+
+}
+
+footer 
+{
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p
+
+{
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+footer p:hover
+{
+    color: #B5B5B5;
+    height: auto;
+    text-decoration: underline;
+    text-decoration-color: #8B0000;
+}
+footer ul{
+    display:inline-flex;
+    list-style-type:none;
+    padding: 0;
+    
+}
+footer a{
+    color: #000;
+}
+
+
+
