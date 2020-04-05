@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-08 05:46:25
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 16:34:08
   from 'C:\wamp64\www\japahortifruti\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d9c4ce17f3911_35375103',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e8a32b0da0292_33517706',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9c4ce17f3911_35375103 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8a32b0da0292_33517706 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 

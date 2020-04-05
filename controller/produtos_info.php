@@ -11,7 +11,7 @@ $image->GetIMagesPRO(Rotas::$pag[1]);
 $smarty->assign('PRO', $produtos->GetItens());
 $smarty->assign('TEMA', Rotas::get_SiteTEMA());
 $smarty->assign('IMAGES', $image->GetItens());
-$smarty->assign('PAG_COMPRAR', Rotas::pag_CarrinhoAlterar().'#meucarrinho');
+$smarty->assign('PAG_COMPRAR', Rotas::pag_CarrinhoAlterar());
 
  
 

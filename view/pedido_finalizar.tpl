@@ -10,7 +10,7 @@
         Pedido Finalizado com Sucesso!
         </div>
         <div class="alert alert-info">
-        Em breve entraremos em contato pelo Whatsapp para confirmar este pedido e informar o valor do frete.
+        Em breve entraremos em contato pelo Whatsapp para confirmar este pedido.
         </div>
         <div class="alert alert-warning">
         Atenção pagamento será feito no momento da entrega! aceitamos cartões
@@ -65,14 +65,12 @@
                Total : R$ {$TOTAL}
             </h4>
                 <h4>
-               Frete : A calcular...
+               Frete : {$FRETE}
             </h4>
                 <hr>
-<!--
             <h4>
                Total do Pedido : R$ {$TOTAL_FRETE}
             </h4>
--->
             </div>
 
 

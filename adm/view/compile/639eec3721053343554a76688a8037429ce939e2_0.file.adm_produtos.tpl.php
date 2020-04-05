@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-07 04:12:09
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 22:17:22
   from 'C:\wamp64\www\japahortifruti\adm\view\adm_produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d9ae549bb4678_02920069',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e87e0226579f0_00732648',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9ae549bb4678_02920069 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e87e0226579f0_00732648 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2 class="text-center">Gerenciar Produtos</h2>
 <hr>
 <section class="row ">

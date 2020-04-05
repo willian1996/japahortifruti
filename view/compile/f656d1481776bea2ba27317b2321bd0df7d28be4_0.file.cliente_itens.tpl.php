@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-08 05:26:00
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 21:36:44
   from 'C:\wamp64\www\japahortifruti\view\cliente_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d9c4818740ee8_52813244',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e87d69cba8270_07770332',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f656d1481776bea2ba27317b2321bd0df7d28be4' => 
     array (
       0 => 'C:\\wamp64\\www\\japahortifruti\\view\\cliente_itens.tpl',
-      1 => 1565319068,
+      1 => 1585960602,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9c4818740ee8_52813244 (Smarty_Internal_Template $_smarty_tpl) {
-?><br><br>
+function content_5e87d69cba8270_07770332 (Smarty_Internal_Template $_smarty_tpl) {
+?><br><br> 
 <h4 class="text-center">Dados do pedido</h4>
 
 <!-- informações sobre o pedido -->
@@ -127,13 +127,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                     <tr>
 
-                        <td class="text-danger"> <b>Frete:</b> A calcular...</td>
+                        <td class="text-danger"> <b>Frete:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor'];?>
+</td>
 
                         <td class="text-danger"> <b>Total:</b> R$<?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 </td>
 
-<!--                        <td class="text-danger"> <b>Final:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value;?>
-</td>-->
+                        <td class="text-danger"> <b>Final:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value;?>
+</td>
 
                     </tr>  
 

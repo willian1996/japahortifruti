@@ -67,19 +67,18 @@
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
-        
+        <hr>
         <h4>
            Total : R$ {$TOTAL}
         </h4>
         <h4>
-           Frete : A calcular...
+           Frete : {$FRETE}
         </h4>
         
-<!--
         <h4>
            Total com Frete : R$ {$TOTAL_FRETE}
         </h4>
--->
+        <hr>
     </div>
 
 

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-08 06:09:21
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 21:45:55
   from 'C:\wamp64\www\japahortifruti\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d9c52416204b9_11225835',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e87d8c3ec1a86_55191545',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9c52416204b9_11225835 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e87d8c3ec1a86_55191545 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>

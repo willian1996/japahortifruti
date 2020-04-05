@@ -1,4 +1,4 @@
-<br><br>
+<br><br> 
 <h4 class="text-center">Dados do pedido</h4>
 
 <!-- informações sobre o pedido -->
@@ -83,11 +83,11 @@
 
                     <tr>
 
-                        <td class="text-danger"> <b>Frete:</b> A calcular...</td>
+                        <td class="text-danger"> <b>Frete:</b> R${$ITENS.1.ped_frete_valor}</td>
 
                         <td class="text-danger"> <b>Total:</b> R${$TOTAL}</td>
 
-<!--                        <td class="text-danger"> <b>Final:</b> R${$ITENS.1.ped_frete_valor+$TOTAL}</td>-->
+                        <td class="text-danger"> <b>Final:</b> R${$ITENS.1.ped_frete_valor+$TOTAL}</td>
 
                     </tr>  
 

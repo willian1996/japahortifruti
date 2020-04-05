@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-07 04:03:17
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 18:25:55
   from 'C:\wamp64\www\japahortifruti\view\menu_cliente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d9ae335f393d8_62720406',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e87a9e3375de0_99814337',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9ae335f393d8_62720406 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e87a9e3375de0_99814337 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h4 class="text-center text-danger"> Olá <b><?php echo $_smarty_tpl->tpl_vars['USER']->value;?>
 </b><br> O que deseja fazer agora?</h4> 
 <section class="row" id="minhaconta">

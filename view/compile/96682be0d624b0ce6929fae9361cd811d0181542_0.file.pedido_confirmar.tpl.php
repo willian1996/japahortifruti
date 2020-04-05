@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-31 20:45:49
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 19:38:42
   from 'C:\wamp64\www\japahortifruti\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5e83d62d6ca5d1_94716997',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e87baf2bf3346_18988446',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96682be0d624b0ce6929fae9361cd811d0181542' => 
     array (
       0 => 'C:\\wamp64\\www\\japahortifruti\\view\\pedido_confirmar.tpl',
-      1 => 1585698295,
+      1 => 1585953520,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e83d62d6ca5d1_94716997 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e87baf2bf3346_18988446 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3 id="confpedido">Confirmar Pedido</h3>
 <hr>
 <!-- botoes e opções de cima -->
@@ -105,21 +105,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
-        
+        <hr>
         <h4>
            Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 
         </h4>
         <h4>
-           Frete : A calcular...
+           Frete : <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+
         </h4>
         
-<!--
         <h4>
            Total com Frete : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
 
         </h4>
--->
+        <hr>
     </div>
 
 

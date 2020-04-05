@@ -6,7 +6,7 @@ class Pedidos extends Conexao{
         parent::__construct();
     }
      
-    public function PedidoGravar($cliente, $cod, $ref, $freteValor=null, $freteTipo=null){
+    public function PedidoGravar($cliente, $cod, $ref, $freteValor, $freteTipo=null){
          
         $retorno = FALSE;
         

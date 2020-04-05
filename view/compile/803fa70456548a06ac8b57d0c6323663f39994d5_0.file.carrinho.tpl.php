@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-31 21:00:25
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 16:32:25
   from 'C:\wamp64\www\japahortifruti\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5e83d999d14f29_02978162',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e8a3249104714_48199623',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '803fa70456548a06ac8b57d0c6323663f39994d5' => 
     array (
       0 => 'C:\\wamp64\\www\\japahortifruti\\view\\carrinho.tpl',
-      1 => 1585699198,
+      1 => 1586115137,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e83d999d14f29_02978162 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8a3249104714_48199623 (Smarty_Internal_Template $_smarty_tpl) {
 ?>   
 <h3 id="meucarrinho">Meu Carrinho</h3>
 <hr>
@@ -163,13 +163,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
+        <hr>
     <h4>
        Total : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
- + Frete
-    </h4>
-        
+ + Frete R$ <?php echo $_smarty_tpl->tpl_vars['FRETE_PRECO']->value;?>
 
-    </div>
+        <br><br>
+       <?php if (!Login::Logado()) {?>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_LOGIN']->value;?>
+">Faça o login para calcular frete</a>
+        <?php }?>
+        <br><br>
+        <?php echo $_smarty_tpl->tpl_vars['CLI_ENDERECO']->value;?>
+
+    </h4>
+        <hr>
+
+    </div> 
 
 
 
@@ -200,7 +210,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <section>
     <center>
         <h4><strong>Pagamento na Entrega</strong></h4> 
-        <p>Entregamos somente em <strong>São Sebastião</strong>, <strong>Ilhabela</strong>, <strong>Ubatuba</strong> e <strong>Caraguatatuba</strong> o  frete pode custar de R$0,00 á R$7,00 dependendo do seu bairro e cidade, será informado pelo Whatsapp após a confirmação do pedido.</p>
+        <p>Entregamos somente em <strong>São Sebastião</strong>, <strong>Ilhabela</strong>, <strong>Ubatuba</strong> e <strong>Caraguatatuba</strong> o preço do frete é calculado assim que fizer o login</p>
         
     </center>
 </section>

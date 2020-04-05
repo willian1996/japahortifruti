@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-03-31 20:48:28
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 22:16:12
   from 'C:\wamp64\www\japahortifruti\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5e83d6cc0de938_96501485',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e87dfdc2dd0d6_68413278',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '571787d70930d2b17f2f82d1414c28b1ea95be44' => 
     array (
       0 => 'C:\\wamp64\\www\\japahortifruti\\view\\pedido_finalizar.tpl',
-      1 => 1585698496,
+      1 => 1585962820,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e83d6cc0de938_96501485 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e87dfdc2dd0d6_68413278 (Smarty_Internal_Template $_smarty_tpl) {
 ?><hr>
 <!--  table listagem de itens -->
 <section id="tabelafinalizar" class="row ">
@@ -35,7 +35,7 @@ function content_5e83d6cc0de938_96501485 (Smarty_Internal_Template $_smarty_tpl)
         Pedido Finalizado com Sucesso!
         </div>
         <div class="alert alert-info">
-        Em breve entraremos em contato pelo Whatsapp para confirmar este pedido e informar o valor do frete.
+        Em breve entraremos em contato pelo Whatsapp para confirmar este pedido.
         </div>
         <div class="alert alert-warning">
         Atenção pagamento será feito no momento da entrega! aceitamos cartões
@@ -105,15 +105,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </h4>
                 <h4>
-               Frete : A calcular...
+               Frete : <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+
             </h4>
                 <hr>
-<!--
             <h4>
                Total do Pedido : R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
 
             </h4>
--->
             </div>
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-08 06:10:08
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 21:48:51
   from 'C:\wamp64\www\japahortifruti\adm\view\adm_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d9c52702ceec9_92704152',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e87d973a10917_41948959',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '39a958a84d1ea9d1cf65c00559c0b951c5a60b87' => 
     array (
       0 => 'C:\\wamp64\\www\\japahortifruti\\adm\\view\\adm_itens.tpl',
-      1 => 1565411638,
+      1 => 1585961329,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9c52702ceec9_92704152 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e87d973a10917_41948959 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3 class="text-center">Dados do Pedido</h3> 
 
 <!-- informações sobre o pedido -->
@@ -107,13 +107,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </td>
                 <td class="text-danger"> <b>Total:</b> R$<?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 </td>
-<!--                <td class="text-danger"> <b>Final:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value;?>
-</td>-->
+                <td class="text-danger"> <b>Final:</b> R$<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value;?>
+</td>
             </tr> 
         </table>
     </center>
     
-    <br><hr>
+    <hr>
     <center>
         <h4>Mudar Status do Pedido</h4>
         <form method="post" action="">
@@ -141,7 +141,7 @@ if ($_prefixVariable4 == 'CANCELADO') {?>selected="selected"<?php }?>>CANCELADO<
     </center>
 </section>
 
-<br>
+
 <hr>    
 
     <h3 class="text-center">Dados do Cliente</h3>

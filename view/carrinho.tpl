@@ -122,12 +122,19 @@
     </div>
 
     <div class="col-md-4 text-right text-danger bg-warning">
+        <hr>
     <h4>
-       Total : R$ {$TOTAL} + Frete
+       Total : R$ {$TOTAL} + Frete R$ {$FRETE_PRECO}
+        <br><br>
+       {if !Login::Logado()}
+        <a href="{$PAG_LOGIN}">Faça o login para calcular frete</a>
+        {/if}
+        <br><br>
+        {$CLI_ENDERECO}
     </h4>
-        
+        <hr>
 
-    </div>
+    </div> 
 
 
 
@@ -157,7 +164,7 @@
 <section>
     <center>
         <h4><strong>Pagamento na Entrega</strong></h4> 
-        <p>Entregamos somente em <strong>São Sebastião</strong>, <strong>Ilhabela</strong>, <strong>Ubatuba</strong> e <strong>Caraguatatuba</strong> o  frete pode custar de R$0,00 á R$7,00 dependendo do seu bairro e cidade, será informado pelo Whatsapp após a confirmação do pedido.</p>
+        <p>Entregamos somente em <strong>São Sebastião</strong>, <strong>Ilhabela</strong>, <strong>Ubatuba</strong> e <strong>Caraguatatuba</strong> o preço do frete é calculado assim que fizer o login</p>
         
     </center>
 </section>

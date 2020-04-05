@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-07 05:14:45
+/* Smarty version 3.1.34-dev-7, created on 2020-04-03 18:46:33
   from 'C:\wamp64\www\japahortifruti\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.33',
-  'unifunc' => 'content_5d9af3f50dd3e4_42252957',
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e87aeb91bf894_58950563',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d9af3f50dd3e4_42252957 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e87aeb91bf894_58950563 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br><br>
 <section class="row" id="pedidos">
 
