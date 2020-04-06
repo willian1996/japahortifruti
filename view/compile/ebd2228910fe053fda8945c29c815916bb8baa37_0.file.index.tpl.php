@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-04-03 18:17:53
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 19:02:49
   from 'C:\wamp64\www\japahortifruti\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e87a801d9e335_49535935',
+  'unifunc' => 'content_5e8a5589327b81_46265828',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ebd2228910fe053fda8945c29c815916bb8baa37' => 
     array (
       0 => 'C:\\wamp64\\www\\japahortifruti\\view\\index.tpl',
-      1 => 1585702586,
+      1 => 1586124167,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e87a801d9e335_49535935 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8a5589327b81_46265828 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 
 <html>
@@ -137,7 +137,7 @@ function content_5e87a801d9e335_49535935 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="col-md-2" id="lateral">
 
                 <div class="list-group">
-                    <span class="list-group-item active"> Categorias</span>
+                    <span class="list-group-item active"> CATEGORIAS</span>
 
                     <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTOS']->value;?>
 #produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>

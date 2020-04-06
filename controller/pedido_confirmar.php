@@ -1,4 +1,4 @@
-<?php 
+<?php  
   
 if(!Login::Logado()){
     Login::AcessoNegado();

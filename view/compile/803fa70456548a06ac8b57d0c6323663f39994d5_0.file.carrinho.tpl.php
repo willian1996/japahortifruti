@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-04-05 16:32:25
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 20:48:16
   from 'C:\wamp64\www\japahortifruti\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e8a3249104714_48199623',
+  'unifunc' => 'content_5e8a6e40e63759_95513225',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '803fa70456548a06ac8b57d0c6323663f39994d5' => 
     array (
       0 => 'C:\\wamp64\\www\\japahortifruti\\view\\carrinho.tpl',
-      1 => 1586115137,
+      1 => 1586127213,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e8a3249104714_48199623 (Smarty_Internal_Template $_smarty_tpl) {
-?>   
+function content_5e8a6e40e63759_95513225 (Smarty_Internal_Template $_smarty_tpl) {
+?>    
 <h3 id="meucarrinho">Meu Carrinho</h3>
 <hr>
 <!-- botoes e opções de cima -->

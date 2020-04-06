@@ -99,7 +99,7 @@
                 <div class="col-md-2" id="lateral">
 
                 <div class="list-group">
-                    <span class="list-group-item active"> Categorias</span>
+                    <span class="list-group-item active"> CATEGORIAS</span>
 
                     <a href="{$PAG_PRODUTOS}#produtos" class="list-group-item"><span class="glyphicon glyphicon-menu-right"></span>Todos</a>
 

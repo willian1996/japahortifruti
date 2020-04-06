@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-04-03 22:16:12
+/* Smarty version 3.1.34-dev-7, created on 2020-04-05 19:29:25
   from 'C:\wamp64\www\japahortifruti\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e87dfdc2dd0d6_68413278',
+  'unifunc' => 'content_5e8a5bc59a8631_69832344',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '571787d70930d2b17f2f82d1414c28b1ea95be44' => 
     array (
       0 => 'C:\\wamp64\\www\\japahortifruti\\view\\pedido_finalizar.tpl',
-      1 => 1585962820,
+      1 => 1585963331,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e87dfdc2dd0d6_68413278 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e8a5bc59a8631_69832344 (Smarty_Internal_Template $_smarty_tpl) {
 ?><hr>
 <!--  table listagem de itens -->
 <section id="tabelafinalizar" class="row ">

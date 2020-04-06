@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 08-Out-2019 às 09:22
+-- Generation Time: 05-Abr-2020 às 20:19
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.3.5
 
@@ -357,7 +357,7 @@ CREATE TABLE IF NOT EXISTS `gm_categorias` (
   `cate_nome` varchar(50) NOT NULL,
   `cate_slug` varchar(50) NOT NULL,
   PRIMARY KEY (`cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_categorias`
@@ -367,7 +367,7 @@ INSERT INTO `gm_categorias` (`cate_id`, `cate_nome`, `cate_slug`) VALUES
 (6, 'Frutas ', 'frutas'),
 (2, 'Verduras ', 'verduras'),
 (3, 'Legumes', 'legumes'),
-(4, 'Granjeiros', 'granjeiros');
+(16, 'Cestas ', 'cestas');
 
 -- --------------------------------------------------------
 
@@ -399,7 +399,7 @@ CREATE TABLE IF NOT EXISTS `gm_clientes` (
 --
 
 INSERT INTO `gm_clientes` (`cli_id`, `cli_nome`, `cli_endereco`, `cli_numero`, `cli_ponto_referencia`, `cli_bairro`, `cli_cidade`, `cli_cep`, `cli_cpf`, `cli_fone`, `cli_celular`, `cli_telefone2`, `cli_pass`, `cli_data_cad`) VALUES
-(13, 'Willian Sales Gabriel', 'Rua Safira', '60', 'Perto do hortifruti JC', 'Pegoreli', 'Caraguatatuba', '11669309', '43593584824', '1238833040', '12996417887', '', 'f8bf5f221cef51838766c7e8348bf5da', '2019-02-26 04:01:06');
+(13, 'Willian Sales Gabriel', 'Rua Safira', '60', 'Perto do hortifruti JC', 'Centro', 'Caraguatatuba', '11669309', '43593584824', '1238833040', '12996417887', '', 'f8bf5f221cef51838766c7e8348bf5da', '2019-02-26 04:01:06');
 
 -- --------------------------------------------------------
 
@@ -437,16 +437,28 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos` (
   `ped_frete_valor` double(9,2) DEFAULT NULL,
   `ped_frete_tipo` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`ped_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=115 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos`
 --
 
 INSERT INTO `gm_pedidos` (`ped_id`, `ped_data`, `ped_hora`, `ped_cliente`, `ped_cod`, `ped_ref`, `ped_pag_status`, `ped_pag_forma`, `ped_pag_tipo`, `ped_pag_codigo`, `ped_frete_valor`, `ped_frete_tipo`) VALUES
-(96, '2019-10-08', '05:25:48', 13, '191008051048513', '191008051048513', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
-(97, '2019-10-08', '05:56:02', 13, '191008051002213', '191008051002213', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
-(98, '2019-10-08', '06:03:32', 13, '191008061032713', '191008061032713', 'SEPARADO', NULL, NULL, NULL, NULL, NULL);
+(101, '2020-03-31', '20:36:31', 13, '200331200331513', '200331200331513', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(100, '2020-03-31', '20:18:11', 13, '200331200311613', '200331200311613', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(99, '2020-03-31', '20:12:12', 13, '200331200312513', '200331200312513', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(102, '2020-03-31', '20:45:53', 13, '200331200353613', '200331200353613', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(103, '2020-03-31', '20:48:28', 13, '200331200328613', '200331200328613', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(104, '2020-03-31', '21:05:25', 13, '200331210325113', '200331210325113', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(109, '2020-03-31', '21:26:22', 13, '132003312103229', '132003312103229', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(106, '2020-03-31', '21:11:10', 13, '200331210310133', '200331210310133', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(107, '2020-03-31', '21:11:31', 13, '200331210331133', '200331210331133', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(108, '2020-03-31', '21:15:13', 13, '132003312103138', '132003312103138', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(110, '2020-04-03', '19:44:14', 13, '132004031904149', '132004031904149', 'SOLICITADO', NULL, NULL, NULL, NULL, NULL),
+(111, '2020-04-03', '19:48:07', 13, '132004031904073', '132004031904073', 'CANCELADO', NULL, NULL, NULL, NULL, NULL),
+(112, '2020-04-03', '21:43:40', 13, '132004032104409', '132004032104409', 'SEPARADO', NULL, NULL, NULL, 13.00, NULL),
+(113, '2020-04-03', '22:10:27', 13, '132004032204274', '132004032204274', 'SOLICITADO', NULL, NULL, NULL, 2.00, NULL),
+(114, '2020-04-03', '22:16:12', 13, '132004032204122', '132004032204122', 'ENTREGUE', NULL, NULL, NULL, 2.00, NULL);
 
 -- --------------------------------------------------------
 
@@ -463,19 +475,31 @@ CREATE TABLE IF NOT EXISTS `gm_pedidos_itens` (
   `item_qtd` int(6) NOT NULL,
   `item_ped_cod` varchar(50) NOT NULL,
   PRIMARY KEY (`item_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=147 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_pedidos_itens`
 --
 
 INSERT INTO `gm_pedidos_itens` (`item_id`, `item_produto`, `item_tamanho`, `item_valor`, `item_qtd`, `item_ped_cod`) VALUES
-(122, 14, 'G', 69.90, 1, '191008051048513'),
-(123, 11, 'G', 99.99, 1, '191008051048513'),
-(124, 4, 'M', 49.90, 1, '191008051048513'),
-(125, 38, '40', 30.00, 1, '191008051048513'),
-(126, 38, '42', 30.00, 3, '191008051002213'),
-(127, 22, '', 99.90, 1, '191008061032713');
+(133, 41, '', 150.00, 2, '200331200353613'),
+(132, 41, '', 150.00, 2, '200331200331513'),
+(131, 40, '', 75.00, 1, '200331200331513'),
+(130, 40, '', 75.00, 1, '200331200311613'),
+(129, 41, '', 150.00, 1, '200331200311613'),
+(128, 41, '', 150.00, 2, '200331200312513'),
+(134, 41, '', 150.00, 1, '200331200328613'),
+(135, 41, '', 150.00, 2, '200331210325113'),
+(136, 40, '', 75.00, 4, '200331210325113'),
+(141, 41, '', 150.00, 1, '132003312103229'),
+(138, 40, '', 75.00, 1, '200331210310133'),
+(139, 40, '', 75.00, 1, '200331210331133'),
+(140, 40, '', 75.00, 1, '132003312103138'),
+(142, 41, '', 150.00, 1, '132004031904149'),
+(143, 41, '', 150.00, 1, '132004031904073'),
+(144, 41, '', 150.00, 1, '132004032104409'),
+(145, 41, '', 150.00, 1, '132004032204274'),
+(146, 40, '', 75.00, 1, '132004032204122');
 
 -- --------------------------------------------------------
 
@@ -498,24 +522,15 @@ CREATE TABLE IF NOT EXISTS `gm_produtos` (
   `pro_ativo` varchar(3) NOT NULL,
   `pro_frete_gratis` varchar(100) NOT NULL DEFAULT 'Não',
   PRIMARY KEY (`pro_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `gm_produtos`
 --
 
 INSERT INTO `gm_produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `pro_peso`, `pro_valor`, `pro_tamanho`, `pro_img`, `pro_slug`, `pro_ref`, `pro_ativo`, `pro_frete_gratis`) VALUES
-(7, 2, 'un. Alface Americana ', '', 0.050, 6.50, 'P,M,G,GG', '191007043229alface-americana.jpg.jpg', 'un.-alface-americana', '2', 'SIM', 'Não'),
-(6, 2, 'un. Couve ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 4.00, 'P,M,G,GG', '191007043525couve.jpg.jpg', 'un.-couve', '1', 'SIM', 'Não'),
-(5, 3, 'kg. Berinjela', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 6.00, 'P,M,G,GG', '191007045538beringela.jpg.jpg', 'kg.-berinjela', '456', 'SIM', 'Não'),
-(4, 3, 'kg. Pepino Japonês ', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 7.50, 'P,M,G,GG', '191007045707pepino-japones.jpg.jpg', 'kg.-pepino-japones', 'ddds', 'SIM', 'Não'),
-(9, 6, 'kg. Uva Rubi ', '', 0.050, 8.00, 'P,M,G,GG', '191007043836uva-rubi.png.png', 'kg.-uva-rubi', '5666', 'SIM', 'Não'),
-(11, 6, 'kg. Maçã', '<p>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA) -&gt;ATEN&Ccedil;&Atilde;O CONSULTAR A DATA DE ENTREGA ANTES DE FINALIZAR O PEDIDO -&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O. -&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA. -&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA. -&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA. Aceitamos cart&otilde;es com 5% de acr&eacute;scimo Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>', 0.050, 5.80, 'P,M,G,GG', '191007043705maca.jpg.jpg', 'kg.-maca', '45522', 'SIM', 'Não'),
-(14, 2, 'un. Alface Crespa', '<p>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA) -&gt;ATEN&Ccedil;&Atilde;O CONSULTAR A DATA DE ENTREGA ANTES DE FINALIZAR O PEDIDO -&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O. -&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA. -&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA. -&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA. Aceitamos cart&otilde;es com 5% de acr&eacute;scimo Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>', 0.050, 3.80, 'P,M,G,GG', '191007043115alface-crespa.jpg.jpg', 'un.-alface-crespa', 'ddfff', 'SIM', 'Não'),
-(22, 3, 'Caixa de Cenoura', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega<br /><br />-&gt;NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.<br />-&gt;NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.<br />-&gt;NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.<br />-&gt;NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.<br /><br /><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 99.90, 'P,M,G,GG', '191007042750cenoura.jpg.jpg', 'caixa-de-cenoura', '45662255', 'SIM', 'Não'),
-(36, 4, 'Caixa de Ovos Brancos', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n<p><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 30.00, 'P,M,G,GG', '191007042617ovos-brancos.jpg.jpg', 'caixa-de-ovos-brancos', '5d4a5caf4c4a7', 'SIM', 'Não'),
-(37, 4, 'Caixa de Ovos Caipiras', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n<p><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 48.00, 'P,M,G,GG', '191007042351ovos-caipira-.jpg.jpg', 'caixa-de-ovos-caipiras', '5d4a5cecbac52', 'SIM', 'Não'),
-(38, 3, 'Caixa de chuchu', '<p><strong>OS PEDIDOS SER&Atilde;O SEPARADOS NA PR&Oacute;XIMA SEGUNDA-FEIRA (PAGAMENTO NA ENTREGA)</strong><br /><br />Por favor consulte a data de entrega antes de finalizar seu pedido porque o pagamento ser&aacute; feito no momento da entrega</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUARTA-FEIRA ENTREGAREMOS EM S&Atilde;O SEBASTI&Atilde;O.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA QUINTA-FEIRA ENTREGAREMOS EM CARAGUATATUBA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>NA PR&Oacute;XIMA SEXTA-FEIRA ENTREGAREMOS NA ILHABELA.</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>NO PR&Oacute;XIMO S&Aacute;BADO ENTREGAREMOS NA COSTA SUL DE S&Atilde;O SEBASTI&Atilde;O AT&Eacute; BORAC&Eacute;IA.</li>\r\n</ul>\r\n<p><em>Aceitamos cart&otilde;es com 5% de acr&eacute;scimo</em><br /><br /></p>', 0.050, 30.00, '36,38,40,42', '191007042142chuchu.jpg.jpg', 'caixa-de-chuchu', '5d4a5dde0b741', 'SIM', 'Não');
+(40, 16, 'Cesta de Hortifrúti Média ', '<p><strong>Conte&uacute;do da Cesta de Hortifr&uacute;ti M&eacute;dia </strong></p>\r\n<p><em>8 und banana prata</em></p>\r\n<p><em>8 und laranja</em></p>\r\n<p><em>5 und lim&atilde;o</em></p>\r\n<p><em>5 und ma&ccedil;&atilde; fugi</em></p>\r\n<p><em>2 und pera</em></p>\r\n<p><em>2 mam&atilde;ozinhos</em></p>\r\n<p><em>1 und alface</em></p>\r\n<p><em>200 g alho&nbsp;</em></p>\r\n<p><em>1 und piment&atilde;o verde</em></p>\r\n<p><em>&frac14; moranga&nbsp;</em></p>\r\n<p><em>2 und abobrinha</em></p>\r\n<p><em>4 und cenoura vermelha</em></p>\r\n<p><em>8 und batata</em></p>\r\n<p><em>5 und tomate</em></p>\r\n<p><em>5 und cebola</em></p>\r\n<p><em>2 und chuchu</em></p>\r\n<p><em>2 und beterraba</em></p>\r\n<p>&nbsp;</p>\r\n<p><strong>Pedido minimo 75,00 (PAGAMENTO NA ENTREGA)</strong><br /><br /></p>\r\n<ul>\r\n<ul>\r\n<li>Entregamos em Caraguatatuba</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>Entregamos em S&atilde;o Sebasti&atilde;o</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>Entregamos em Ilhabela</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>Entregamos em Ubatuba</li>\r\n</ul>\r\n</ul>\r\n<p><br /><em>foto meramente ilustrativa</em><br /><br /></p>', 0.050, 75.00, 'P', '200331193801cesta.jpg.jpg', 'cesta-de-hortifruti-media', '5e83c649ef4cd', 'SIM', 'Não'),
+(41, 16, 'Cesta de Hortifrúti Grande', '<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><span style=\"box-sizing: border-box; font-weight: bold;\">Conte&uacute;do da Cesta de Hortifr&uacute;ti M&eacute;dia</span></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">8 und banana prata</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">8 und laranja</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">5 und lim&atilde;o</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">5 und ma&ccedil;&atilde; fugi</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">2 und pera</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">2 mam&atilde;ozinhos</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">1 und alface</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">200 g alho&nbsp;</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">1 und piment&atilde;o verde</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">&frac14; moranga&nbsp;</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">2 und abobrinha</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">4 und cenoura vermelha</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">8 und batata</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">5 und tomate</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">5 und cebola</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">2 und chuchu</em></p>\r\n<p style=\"box-sizing: border-box; margin: 0px 0px 10px; color: #333333; font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; background-color: #ffffff;\"><em style=\"box-sizing: border-box;\">2 und beterraba</em></p>\r\n<p><strong>Pedido minimo 75,00 (PAGAMENTO NA ENTREGA)</strong><br /><br /></p>\r\n<ul>\r\n<ul>\r\n<li>Entregamos em Caraguatatuba</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>Entregamos em S&atilde;o Sebasti&atilde;o</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>Entregamos em Ilhabela</li>\r\n</ul>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<ul>\r\n<li>Entregamos em Ubatuba</li>\r\n</ul>\r\n</ul>\r\n<p><br /><em>foto meramente ilustrativa</em><br /><br /></p>', 0.050, 150.00, 'P', '200331194526cesta-grande.jpg.jpg', 'cesta-de-hortifruti-grande', '5e83c80627081', 'SIM', 'Não');
 
 -- --------------------------------------------------------
 

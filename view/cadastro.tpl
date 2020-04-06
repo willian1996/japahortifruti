@@ -1,4 +1,4 @@
-
+ 
     <form name="cadcliente" class="well form-horizontal" action="" method="post"  id="cadcliente">
 
         <fieldset>
