@@ -94,7 +94,7 @@ class Motoboy extends Conexao{
     }
     
     public function ValorPorKM(){
-        return 0.36;
+        return 0.70;
     }
     
     

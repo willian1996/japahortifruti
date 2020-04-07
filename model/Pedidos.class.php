@@ -129,6 +129,7 @@ class Pedidos extends Conexao{
         unset($_SESSION['PRO']);
         unset($_SESSION['PED']['pedido']);
         unset($_SESSION['PED']['ref']);
+        
     }
     
     

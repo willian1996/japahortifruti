@@ -21,21 +21,29 @@ if(isset($_SESSION['PRO'])){
         $cli_bairro = $_SESSION['CLI']['cli_bairro'];
         $cli_cidade = $_SESSION['CLI']['cli_cidade'];
         
-        //definindo o valor do frete
-        $frete = $motoboy->ValorPorKM() * $motoboy->getKM($cli_bairro, $cli_cidade);
-        
-        $frete_tipo = "";
-        //frete gratis abaixo de 1,00
-        if($frete < 1){
-            $frete = 0;
-            $frete_tipo = "Frete Grátis";
+        //Verificando se a sessao do frete já estava iniciada antes
+        if(!isset($_SESSION['fretePreco'])){
+            //definindo o valor do frete
+            $frete = $motoboy->ValorPorKM() * $motoboy->getKM($cli_bairro, $cli_cidade);
+            $frete_tipo = "Motoboy";
+            //frete gratis abaixo de 1,00
+            if($frete < 1){
+                $frete = 0;
+            }
+            $fretePreco = ceil($frete);
+            //colocando o valor do frete na sessão
+            $_SESSION['fretePreco'] = $fretePreco;
+            echo "sessão ja iniciada agora";
         }
-        $fretePreco = ceil($frete);
-        $_SESSION['fretePreco'] = $fretePreco;
-        $smarty->assign('FRETE_PRECO', Sistema::MoedaBR($fretePreco));
-        $smarty->assign('FRETE_TIPO', $frete_tipo);
-        $smarty->assign('CLI_ENDERECO', $cli_rua.", ".$cli_numero.", ".$cli_bairro.", ".$cli_cidade);
+            
+        
+        
+        
+        $smarty->assign('FRETE_PRECO', Sistema::MoedaBR($_SESSION['fretePreco']));
+//        $smarty->assign('FRETE_TIPO', $frete_tipo);
+        $smarty->assign('CLI_ENDERECO', $cli_rua.", ".$cli_numero.", ".$cli_bairro."<br> ".$cli_cidade);
     }else{
+        //valor do frete vazio
         $smarty->assign('FRETE_PRECO', "?");
         $smarty->assign('CLI_ENDERECO', "");
     }

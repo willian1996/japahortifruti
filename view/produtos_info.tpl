@@ -24,8 +24,8 @@
 
 
         <div class="col-md-6">
-            <br>
-           <h3 class="text-center preco">R$ {$P.pro_valor}</h3>
+            
+           <h1 class="text-center preco">R$ {$P.pro_valor}</h1>
 
         </div>
         <div class="col-md-6">

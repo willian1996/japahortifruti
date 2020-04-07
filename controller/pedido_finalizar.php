@@ -56,7 +56,7 @@ if(!Login::Logado()){
             $pedido->LimparSessoes();
         }
 
-
+ 
 
         $smarty->display('pedido_finalizar.tpl');
 

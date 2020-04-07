@@ -119,6 +119,7 @@ class Login extends Conexao{
     
     static function Logoff(){
         unset($_SESSION['CLI']);
+        unset($_SESSION['fretePreco']);
         echo '<h4 class="alert alert-success"> Saindo...</h4>';
         Rotas::Redirecionar(0, Rotas::pag_ClienteLogin());
     }

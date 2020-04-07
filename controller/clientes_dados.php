@@ -46,6 +46,7 @@ if(isset($_POST['cli_nome']) and isset($_POST['cli_celular']) and isset($_POST['
 
             $login = new Login();
             $login->GetLogin($cli_celular, $cli_senha);
+            unset($_SESSION['fretePreco']);
             Rotas::Redirecionar(0, Rotas::pag_CLienteDados().'#cadcliente');
         }
     }
